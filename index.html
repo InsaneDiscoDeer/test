@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -9,7 +9,7 @@
         <title></title>
         <meta name="description" content="Yoho, big summer blowout">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.min.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <main>
@@ -20,7 +20,33 @@
                         <a href="#">About</a>
                         <a href="#">Buy</a>
                         <button class="button__med" href="#">Login</button>
+                        <!--button class="button_menu"><img src="./images/Component1.svg"></!--button-->
+                        
+                        <div id="burger_links">
+                            <!--button class="button__med" href="#burger">Login</button-->
+                            <a href="#burger">About</a>
+                            <a href="#burger">Buy</a>
+                        </div>
+
+                        <a href="javascript:void(0);" class="button_menu" id="menu_button" onclick="showBurger()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
                     </div>
+
+                    <script>
+                        function showBurger() {
+                            var x = document.getElementById("burger_links");
+                            var y = document.getElementById("menu_button");
+                            if (x.style.display === "flex") {
+                                x.style.display = "none";
+                            } else {
+                                x.style.display = "flex";
+                                //y.style.display = "none";
+                            }
+                        }
+                    </script>
+
                 </nav>
             </header>
             <section class="info">

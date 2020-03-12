@@ -155,8 +155,25 @@ nav {
     font-weight: 700;
 }
 
-@media only screen and (max-width: 1100px) {
+.button_menu {
+    border: none;
+    background: url(./images/Component1.svg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: none;
+    height: 35px;
+    width: 35px;
+    padding: 8px 25px;
+    -webkit-transition: var(--transition);
+    -o-transition: var(--transition);
+    transition: var(--transition);
+}
 
+.links #burger_links {
+    display: none;
+}
+
+@media only screen and (max-width: 1100px) {
     .icon img {
         height: 55px;
         width: auto;
@@ -168,6 +185,10 @@ nav {
 
     .hero__font {
         font-size: 2.1875rem;
+    }
+
+    .button_menu {
+        display: none;
     }
 }
 
@@ -187,5 +208,19 @@ nav {
 
     .icon {
         margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .button_menu {
+        display: flex;
+    }
+
+    .button__med {
+        display: none;
+    }
+
+    a[href="#"] {
+        display: none;
     }
 }
