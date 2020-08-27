@@ -16,36 +16,13 @@
             <header>
                 <nav>
                     <img class="logo" src="./images/logo.svg" />
+
                     <div class="links">
                         <a href="#">About</a>
                         <a href="#">Buy</a>
                         <button class="button__med" href="#">Login</button>
                         <!--button class="button_menu"><img src="./images/Component1.svg"></!--button-->
-                        
-                        <div id="burger_links">
-                            <!--button class="button__med" href="#burger">Login</button-->
-                            <a href="#burger">About</a>
-                            <a href="#burger">Buy</a>
-                        </div>
-
-                        <a href="javascript:void(0);" class="button_menu" id="menu_button" onclick="showBurger()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-
                     </div>
-
-                    <script>
-                        function showBurger() {
-                            var x = document.getElementById("burger_links");
-                            var y = document.getElementById("menu_button");
-                            if (x.style.display === "flex") {
-                                x.style.display = "none";
-                            } else {
-                                x.style.display = "flex";
-                                //y.style.display = "none"; HALLO RAIRAI??
-                            }
-                        }
-                    </script>
 
                 </nav>
             </header>
@@ -53,8 +30,7 @@
                 <h1 class="hero__font">
                     Deja vu 
                     I've just been in this place before
-                    Higher on the street
-                    RAIRAIRAIRAIRAIRAIRAI</h1>
+                    Higher on the street</h1>
                     <div class="icons">
                         <div class="icon">
                             <img src="./images/shop-icon.svg">
@@ -64,6 +40,45 @@
                         </div>
                     </div>
             </section>
+            <section class="mobile_nav">
+                <nav>
+                    <div>
+                        <a href="javascript:void(0);" class="button_menu" id="menu_button" onclick="showBurger()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                        <div class="links">
+                            <div id="burger_links">
+                                <button class="button__med" href="#burger">Login</button>
+                                <a href="#burger">About</a>
+                                <a href="#burger">Buy</a>
+                            </div>
+                        </div>
+
+                        <script>
+                            function showBurger() {
+                                var x = document.getElementById("burger_links");
+                                var y = document.getElementById("menu_button");
+                                if (x.style.display === "flex") {
+                                    x.style.display = "none";
+                                    y.style.transform = "rotate(0deg)";
+                                } else {
+                                    x.style.display = "flex";
+                                    y.style.transform = "rotate(90deg)";
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </nav>
+            </section>
         </main>
     </body>
 </html>
+
+
+<!--section class="mobile_menu">
+    <h1>
+        rairai?
+    </h1>
+</section>
